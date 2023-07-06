@@ -6,30 +6,10 @@
 <div class="container">
   <div class="row">
     <div class="col-8">
-      <% if @garden.plants.present? %>
+      <% if @plants.any? %>
         <div class="container">
           <div class="row">
-            <% @garden.plants.each do |plant| %>
-              <div class="col-6">
-                <div class="card-trip mb-3">
-                  <div class="card-tags">
-                    <% plant.tags.each do |tag| %>
-                      <span><%= tag.name %></span>
-                    <% end %>
-                    <%= link_to "+", new_plant_plant_tag_path(plant) %>
-                  </div>
-                  <img src="<%= plant.image_url %>" />
-                  <div class="card-trip-infos">
-                    <div>
-                      <h2><%= plant.name %></h2>
-                    </div>
-                    <%= link_to plant_path(plant), method: :delete, data: { confirm: "Sure or what?"} do %>
-                      <h2 class="card-trip-pricing">☠️</h2>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-            <% end %>
+            <p>Add plants here...</p>
           </div>
         </div>
       <% else %>
@@ -38,11 +18,7 @@
     </div>
     <div class="col-4">
       <h2>Add a plant:</h2>
-      <%= simple_form_for [@garden, @plant] do |f| %>
-        <%= f.input :name, placeholder: "Bonzai tree" %>
-        <%= f.input :image_url %>
-        <%= f.submit "Add", class: "btn btn-primary" %>
-      <% end %>
+      <p>Add new plan form here</p>
     </div>
   </div>
 </div>

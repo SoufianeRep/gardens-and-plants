@@ -24,4 +24,6 @@ puts "Seed plants..."
 # Bonzai: "http://iris-bleu.i.r.pic.centerblog.net/o/2632ebdc.jpg"
 # Momiji: "https://www.thetreecenter.com/wp-content/uploads/japanese-maple-osakazuki-2.jpg"
 
+# Plants seeds here
+
 puts "Seeding done!"
