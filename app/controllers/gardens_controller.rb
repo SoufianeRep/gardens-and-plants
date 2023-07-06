@@ -8,7 +8,10 @@ class GardensController < ApplicationController
   end
 
   # GET /gardens/1 or /gardens/1.json
-  def show; end
+  def show
+    @plants = @garden.plants
+    @plant = Plant.new
+  end
 
   # GET /gardens/new
   def new
@@ -57,6 +60,7 @@ class GardensController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_garden
     @garden = Garden.find(params[:id])
